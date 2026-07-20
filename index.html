@@ -3,669 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Academic Pathways provides independent, practical reviews of undergraduate, graduate, and postdoctoral education plans.">
-    <title>VeriPathways | Make Your Education Plan Worth It</title>
-
-    <style>
-        :root {
-            --ink: #17233b;
-            --muted: #58647a;
-            --navy: #183153;
-            --navy-dark: #10243f;
-            --gold: #d6a84b;
-            --gold-light: #f7ecd2;
-            --cream: #fbf8f1;
-            --white: #ffffff;
-            --line: #dfe4ea;
-            --shadow: 0 18px 50px rgba(23, 35, 59, 0.1);
-            --radius: 18px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--white);
-            color: var(--ink);
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            line-height: 1.65;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        .container {
-            width: min(1120px, calc(100% - 40px));
-            margin: 0 auto;
-        }
-
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            border-bottom: 1px solid rgba(223, 228, 234, 0.8);
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(12px);
-        }
-
-        .nav {
-            min-height: 74px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 28px;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--navy);
-            font-size: 1.08rem;
-            font-weight: 800;
-            letter-spacing: 0.02em;
-            text-decoration: none;
-        }
-
-        .brand-mark {
-            width: 38px;
-            height: 38px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: var(--navy);
-            color: var(--gold);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.2rem;
-        }
-
-        .brand-text {
-            display: grid;
-            gap: 1px;
-        }
-
-        .brand-name {
-            line-height: 1.1;
-        }
-
-        .brand-tagline {
-            color: var(--muted);
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            line-height: 1.2;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            font-size: 0.94rem;
-            font-weight: 650;
-            text-decoration: none;
-        }
-
-        .nav-links a:hover {
-            color: var(--navy);
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 50px;
-            padding: 0 24px;
-            border: 1px solid var(--navy);
-            border-radius: 999px;
-            background: var(--navy);
-            color: var(--white);
-            font-weight: 750;
-            text-decoration: none;
-            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            background: var(--navy-dark);
-            box-shadow: 0 10px 24px rgba(24, 49, 83, 0.18);
-        }
-
-        .button-secondary {
-            background: transparent;
-            color: var(--navy);
-        }
-
-        .button-secondary:hover {
-            background: var(--cream);
-            color: var(--navy);
-        }
-
-        .button-small {
-            min-height: 42px;
-            padding: 0 19px;
-            font-size: 0.9rem;
-        }
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            padding: 106px 0 96px;
-            background:
-                radial-gradient(circle at 88% 16%, rgba(214, 168, 75, 0.22), transparent 25%),
-                linear-gradient(135deg, #f9fbfd 0%, var(--cream) 100%);
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            right: -90px;
-            bottom: -180px;
-            width: 420px;
-            height: 420px;
-            border: 1px solid rgba(24, 49, 83, 0.1);
-            border-radius: 50%;
-        }
-
-        .hero-grid {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1.18fr 0.82fr;
-            align-items: center;
-            gap: 78px;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            margin-bottom: 22px;
-            color: #8a6420;
-            font-size: 0.8rem;
-            font-weight: 850;
-            letter-spacing: 0.13em;
-            text-transform: uppercase;
-        }
-
-        .eyebrow::before {
-            content: "";
-            width: 30px;
-            height: 2px;
-            background: var(--gold);
-        }
-
-        h1, h2, h3 {
-            line-height: 1.15;
-        }
-
-        h1 {
-            max-width: 740px;
-            margin-bottom: 25px;
-            color: var(--navy-dark);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(3rem, 6vw, 5.2rem);
-            font-weight: 500;
-            letter-spacing: -0.045em;
-        }
-
-        .hero-copy {
-            max-width: 660px;
-            margin-bottom: 34px;
-            color: var(--muted);
-            font-size: 1.18rem;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .audit-card {
-            position: relative;
-            padding: 34px;
-            border: 1px solid rgba(255, 255, 255, 0.55);
-            border-radius: 24px;
-            background: var(--navy);
-            color: var(--white);
-            box-shadow: var(--shadow);
-        }
-
-        .audit-card::before {
-            content: "";
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            width: 58px;
-            height: 58px;
-            border: 1px solid rgba(214, 168, 75, 0.5);
-            border-radius: 50%;
-        }
-
-        .audit-card h2 {
-            margin-bottom: 18px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.7rem;
-            font-weight: 500;
-        }
-
-        .audit-list {
-            display: grid;
-            gap: 16px;
-            list-style: none;
-        }
-
-        .audit-list li {
-            display: grid;
-            grid-template-columns: 27px 1fr;
-            gap: 11px;
-            color: #e7edf5;
-        }
-
-        .audit-list li::before {
-            content: "✓";
-            width: 24px;
-            height: 24px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: rgba(214, 168, 75, 0.18);
-            color: #f4cb78;
-            font-size: 0.78rem;
-            font-weight: 900;
-        }
-
-        section {
-            padding: 92px 0;
-        }
-
-        .section-heading {
-            max-width: 720px;
-            margin-bottom: 50px;
-        }
-
-        .section-heading h2 {
-            margin-bottom: 17px;
-            color: var(--navy-dark);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2.2rem, 4vw, 3.4rem);
-            font-weight: 500;
-            letter-spacing: -0.03em;
-        }
-
-        .section-heading p {
-            color: var(--muted);
-            font-size: 1.08rem;
-        }
-
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .value-card {
-            padding: 30px;
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            background: var(--white);
-        }
-
-        .value-number {
-            margin-bottom: 35px;
-            color: var(--gold);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 2rem;
-        }
-
-        .value-card h3 {
-            margin-bottom: 12px;
-            color: var(--navy);
-            font-size: 1.18rem;
-        }
-
-        .value-card p {
-            color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        .process {
-            background: var(--cream);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-            counter-reset: process;
-        }
-
-        .process-step {
-            position: relative;
-            padding: 29px 24px;
-            border-top: 3px solid var(--gold);
-            background: var(--white);
-            counter-increment: process;
-        }
-
-        .process-step::before {
-            content: "0" counter(process);
-            display: block;
-            margin-bottom: 25px;
-            color: #a87820;
-            font-size: 0.8rem;
-            font-weight: 850;
-            letter-spacing: 0.12em;
-        }
-
-        .process-step h3 {
-            margin-bottom: 10px;
-            color: var(--navy);
-            font-size: 1.08rem;
-        }
-
-        .process-step p {
-            color: var(--muted);
-            font-size: 0.92rem;
-        }
-
-        .consultation-panel {
-            display: grid;
-            grid-template-columns: 1.4fr auto;
-            align-items: center;
-            gap: 28px;
-            max-width: 930px;
-            margin: 0 auto;
-            padding: 38px;
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            background: var(--white);
-            box-shadow: 0 12px 40px rgba(23, 35, 59, 0.06);
-        }
-
-        .consultation-panel h3 {
-            margin-bottom: 12px;
-            color: var(--navy);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.8rem;
-            font-weight: 500;
-        }
-
-        .consultation-panel p {
-            color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        .consultation-panel .button {
-            white-space: nowrap;
-        }
-
-        .about {
-            background: var(--navy-dark);
-            color: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 0.72fr 1.28fr;
-            align-items: center;
-            gap: 76px;
-        }
-
-        .portrait-photo {
-            width: 100%;
-            aspect-ratio: 4 / 5;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 22px;
-            object-fit: cover;
-            object-position: center;
-            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.24);
-        }
-
-        .about .eyebrow {
-            color: #efc978;
-        }
-
-        .about h2 {
-            margin-bottom: 22px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2.3rem, 4vw, 3.6rem);
-            font-weight: 500;
-            letter-spacing: -0.03em;
-        }
-
-        .about-copy {
-            display: grid;
-            gap: 17px;
-            color: #cdd7e5;
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 74px;
-        }
-
-        .faq-list {
-            border-top: 1px solid var(--line);
-        }
-
-        details {
-            border-bottom: 1px solid var(--line);
-        }
-
-        summary {
-            position: relative;
-            padding: 22px 34px 22px 0;
-            color: var(--navy);
-            font-weight: 750;
-            cursor: pointer;
-            list-style: none;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: "+";
-            position: absolute;
-            top: 19px;
-            right: 4px;
-            color: var(--gold);
-            font-size: 1.45rem;
-            font-weight: 400;
-        }
-
-        details[open] summary::after {
-            content: "−";
-        }
-
-        details p {
-            padding: 0 34px 22px 0;
-            color: var(--muted);
-            font-size: 0.94rem;
-        }
-
-        .contact {
-            padding-top: 0;
-        }
-
-        .contact-panel {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-            gap: 35px;
-            padding: 50px;
-            border-radius: 24px;
-            background: var(--gold-light);
-        }
-
-        .contact-panel h2 {
-            margin-bottom: 10px;
-            color: var(--navy-dark);
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 500;
-        }
-
-        .contact-panel p {
-            max-width: 650px;
-            color: var(--muted);
-        }
-
-        footer {
-            padding: 35px 0;
-            border-top: 1px solid var(--line);
-        }
-
-        .footer-grid {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .footer-copy,
-        .disclaimer {
-            color: var(--muted);
-            font-size: 0.78rem;
-        }
-
-        .disclaimer {
-            max-width: 620px;
-            text-align: right;
-        }
-
-        @media (max-width: 900px) {
-            .hero-grid,
-            .about-grid,
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-grid {
-                gap: 50px;
-            }
-
-            .audit-card {
-                max-width: 620px;
-            }
-
-            .value-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-grid {
-                gap: 45px;
-            }
-
-            .portrait-photo {
-                max-width: 380px;
-            }
-
-            .faq-grid {
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 700px) {
-            .container {
-                width: min(100% - 28px, 1120px);
-            }
-
-            .nav-links li:not(:last-child) {
-                display: none;
-            }
-
-            .brand-tagline {
-                display: none;
-            }
-
-            .hero {
-                padding: 78px 0 70px;
-            }
-
-            h1 {
-                font-size: clamp(2.7rem, 15vw, 4rem);
-            }
-
-            section {
-                padding: 70px 0;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .consultation-panel,
-            .audit-card {
-                padding: 28px;
-            }
-
-            .consultation-panel {
-                grid-template-columns: 1fr;
-            }
-
-            .consultation-panel .button {
-                width: 100%;
-                white-space: normal;
-            }
-
-            .contact-panel {
-                grid-template-columns: 1fr;
-                padding: 34px 27px;
-            }
-
-            .contact-panel .button {
-                width: 100%;
-            }
-
-            .footer-grid {
-                flex-direction: column;
-            }
-
-            .disclaimer {
-                text-align: left;
-            }
-        }
-    </style>
+    <meta name="description" content="VeriPathways provides strategic, personalized advising that helps students make intentional higher-education decisions.">
+    <title>VeriPathways | Guiding Your Journey Through Higher Education</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="contact-strip">
+        <div class="contact-strip-inner container">
+            <span>Questions about your academic path?</span>
+            <div class="contact-strip-links">
+                <a href="mailto:info@veripathways.com">info@veripathways.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-banner">
+        <img src="media/images/veripathways_banner_v3.jpg" alt="VeriPathways — Guiding Your Journey Through Higher Education">
+    </div>
+
     <header class="site-header">
         <nav class="nav container" aria-label="Main navigation">
-            <a class="brand" href="#top" aria-label="VeriPathways home">
-                <span class="brand-mark" aria-hidden="true">A</span>
-                <span class="brand-text">
-                    <span class="brand-name">VeriPathways</span>
-                    <span class="brand-tagline">Guiding Your Journey Through Higher Education</span>
-                </span>
-            </a>
-
             <ul class="nav-links">
                 <li><a href="#how-it-works">How it works</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About Rosa</a></li>
-                <li><a class="button button-small" href="mailto:info@veripathways.com?subject=Academic%20Pathways%20Inquiry">Get started</a></li>
             </ul>
         </nav>
     </header>
@@ -675,55 +37,66 @@
             <div class="hero-grid container">
                 <div>
                     <p class="eyebrow">Guiding Your Journey Through Higher Education</p>
-                    <h1>Is your education plan worth it?</h1>
+                    <h1>Make intentional decisions that maximize the value of your higher education.</h1>
                     <p class="hero-copy">
-                        Before you commit more time, energy, and money, get a practical,
-                        independent review of your academic plan and the opportunities it is meant to create.
+                        Strategic, personalized advising for students navigating college choice and academic pathways.
                     </p>
                     <div class="hero-actions">
-                        <a class="button" href="#services">Contact for a consultation appointment</a>
+                        <a class="button" href="#services">Schedule a consultation</a>
                         <a class="button button-secondary" href="#how-it-works">See how it works</a>
                     </div>
                 </div>
-
-                <aside class="audit-card" aria-label="What Academic Pathways examines">
-                    <h2>A clearer view of the whole decision</h2>
-                    <ul class="audit-list">
-                        <li>Alignment between your education plan and long-term goals</li>
-                        <li>Financial cost, time commitment, and opportunity cost</li>
-                        <li>Program fit, skill development, and likely outcomes</li>
-                        <li>Practical alternatives you may not have considered</li>
-                    </ul>
-                </aside>
             </div>
         </section>
 
         <section aria-labelledby="why-heading">
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow">A decision, not a default</p>
-                    <h2 id="why-heading">Education is an investment. Treat it like one.</h2>
+                    <p class="eyebrow">About the Company</p>
+                    <h2 id="why-heading">Higher education is a journey—not a single decision.</h2>
                     <p>
-                        Academic Pathways helps you step back from institutional momentum and evaluate
-                        whether the path in front of you supports the life and career you actually want.
+                        From choosing a college to preparing for graduate school and beyond, Rosa helps
+                        students navigate higher education with confidence, purpose, and a long-term perspective.
+                        Whether you’re preparing for college or already on campus, Rosa helps students think
+                        strategically about key stages of their educational journey, including:
                     </p>
                 </div>
 
                 <div class="value-grid">
                     <article class="value-card">
                         <div class="value-number" aria-hidden="true">01</div>
-                        <h3>Clarify the goal</h3>
-                        <p>Define what success should look like and whether the proposed education is necessary to reach it.</p>
+                        <h3>Choosing the right college or university</h3>
+                        <p>Thoughtfully evaluate academic and social fit, cost, and long-term opportunity.</p>
                     </article>
                     <article class="value-card">
                         <div class="value-number" aria-hidden="true">02</div>
-                        <h3>Measure the tradeoffs</h3>
-                        <p>Consider tuition, funding, time, foregone income, personal priorities, and the risks of continuing.</p>
+                        <h3>Exploring academic pathways</h3>
+                        <p>Identify options that align with your interests and future goals.</p>
                     </article>
                     <article class="value-card">
                         <div class="value-number" aria-hidden="true">03</div>
-                        <h3>Choose intentionally</h3>
-                        <p>Leave with clear observations, focused questions, and practical next steps—not a generic answer.</p>
+                        <h3>Building meaningful relationships</h3>
+                        <p>Connect with faculty, mentors, peers, and professional networks.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="value-number" aria-hidden="true">04</div>
+                        <h3>Finding enriching opportunities</h3>
+                        <p>Pursue research, internships, and experiential learning opportunities that enrich your education.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="value-number" aria-hidden="true">05</div>
+                        <h3>Navigating college culture</h3>
+                        <p>Move through the social, academic, and professional culture of college with confidence.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="value-number" aria-hidden="true">06</div>
+                        <h3>Preparing for graduate or PhD programs</h3>
+                        <p>Plan strategically through research, mentorship, and informed preparation.</p>
+                    </article>
+                    <article class="value-card">
+                        <div class="value-number" aria-hidden="true">07</div>
+                        <h3>Positioning yourself for a meaningful career</h3>
+                        <p>Create opportunities through intentional educational decisions.</p>
                     </article>
                 </div>
             </div>
@@ -733,8 +106,8 @@
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">How it works</p>
-                    <h2 id="process-heading">A focused review with useful next steps.</h2>
-                    <p>The audit happens before the consultation, so your follow-up time can focus on the decisions that matter.</p>
+                    <h2 id="process-heading">Personalized guidance for the decisions that matter.</h2>
+                    <p>Each engagement begins with your goals, circumstances, and questions—not a one-size-fits-all answer.</p>
                 </div>
 
                 <div class="process-grid">
@@ -743,16 +116,16 @@
                         <p>Contact Rosa to discuss your current academic stage, the decision in front of you, and the support that would be most useful.</p>
                     </article>
                     <article class="process-step">
-                        <h3>Submit your plan</h3>
-                        <p>Share your goals, program information, expected costs, timeline, and relevant supporting materials.</p>
+                        <h3>Share your priorities</h3>
+                        <p>Provide your goals, options, expected costs, timeline, and any relevant supporting materials.</p>
                     </article>
                     <article class="process-step">
-                        <h3>Receive your audit</h3>
-                        <p>Rosa independently reviews the material and provides concise written findings and recommendations.</p>
+                        <h3>Explore your options</h3>
+                        <p>Rosa brings research, data, and perspective to the academic, financial, personal, and career considerations involved.</p>
                     </article>
                     <article class="process-step">
-                        <h3>Discuss the findings</h3>
-                        <p>Use the included 30-minute follow-up to ask questions, test assumptions, and identify next steps.</p>
+                        <h3>Choose your next steps</h3>
+                        <p>Discuss the tradeoffs, test assumptions, and identify intentional next steps aligned with your goals and values.</p>
                     </article>
                 </div>
             </div>
@@ -780,26 +153,59 @@
         </section>
 
         <section class="about" id="about" aria-labelledby="about-heading">
-            <div class="about-grid container">
-                <img class="portrait-photo" src="media/images/RosaPortrait.jpg" alt="Rosa Chavarro" loading="lazy">
+            <div class="about-content container">
+                <figure class="about-portrait">
+                    <img src="media/images/RosaPortrait.jpg" alt="Rosa Chavarro, VeriPathways educational consultant">
+                </figure>
 
-                <div>
-                    <p class="eyebrow">About Me</p>
+                <div class="about-details">
+                    <p class="eyebrow">About Rosa</p>
                     <h2 id="about-heading">Rosa Chavarro</h2>
                     <div class="about-copy">
                         <p>
-                            Rosa is a higher-education professional with extensive experience guiding
-                            PhD students, postdoctoral researchers, and early-career professionals through
-                            consequential academic and career decisions.
+                            Rosa is a higher education professional with a decade of experience working across
+                            the higher education landscape. Through her work at a selective research institution
+                            and in student-centered higher education programs, Rosa has developed a unique
+                            perspective on how educational decisions influence long-term academic, professional,
+                            and personal outcomes. Drawing on professional experience and a research-driven
+                            approach, Rosa helps students and families navigate the complex decisions that shape the
+                            higher education journey.
                         </p>
                         <p>
-                            At Columbia University, she has designed and led career-development programs
-                            serving more than 3,000 researchers and students annually and has provided
-                            one-on-one career counseling to more than 100 individuals each year.
-                            Her work brings together education planning, program evaluation, talent
-                            development, and a practical understanding of academic career paths.
+                            Rosa helps students and their families think through the many
+                            factors that influence decisions about college, academic pathways, research
+                            opportunities, and graduate education. These choices are rarely simple—they require
+                            balancing academic, financial, personal, and career considerations that are unique
+                            to every student. Rosa does not tell students where they should go or what they
+                            should study. Instead, she provides the research, data, perspective, and personalized
+                            guidance that help students and their families think critically about their options,
+                            understand the tradeoffs, and make confident decisions that align with their goals,
+                            values, and aspirations.
+                        </p>
+                        <p>
+                            Rosa believes that investing time in thoughtful decision-making today can save students
+                            and families significant time, money, stress, and uncertainty in the future. Every
+                            student follows a different path, and Rosa’s mission is to help each one maximize the
+                            value of their higher education by making intentional decisions that create lasting
+                            opportunities for academic, personal, and professional success.
                         </p>
                     </div>
+                    <a class="button" href="mailto:info@veripathways.com?subject=Consultation%20Appointment">Schedule a Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="voices-heading">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Student-centered guidance</p>
+                    <h2 id="voices-heading">Voices From Our Professional Journey</h2>
+                    <p>
+                        The following reflections come from scholars Rosa has had the opportunity to mentor and
+                        advise throughout her work in higher education. Although these individuals were part of
+                        Rosa’s professional work, their experiences reflect the same thoughtful, student-centered
+                        approach that guides Rosa’s advising philosophy and the way she supports every student and family.
+                    </p>
                 </div>
             </div>
         </section>
@@ -809,36 +215,38 @@
                 <div class="section-heading">
                     <p class="eyebrow">Common questions</p>
                     <h2 id="faq-heading">Before you begin.</h2>
-                    <p>Academic Pathways provides an independent perspective—not a sales pitch for a particular institution or program.</p>
+                    <p>VeriPathways provides an independent perspective—not a sales pitch for a particular institution or program.</p>
                 </div>
 
                 <div class="faq-list">
                     <details>
-                        <summary>What should I submit for review?</summary>
+                        <summary>What should I prepare for a consultation?</summary>
                         <p>
-                            Start with your goals, the program or path you are considering, expected costs,
-                            timeline, funding details, and any questions already on your mind. Rosa will confirm
-                            which additional materials are useful before beginning.
+                            Start with your goals, the college, program, or path you are considering, expected
+                            costs, timeline, and any questions already on your mind. Rosa will confirm which
+                            additional information would be useful.
                         </p>
                     </details>
                     <details>
-                        <summary>Is the follow-up consultation required?</summary>
+                        <summary>Who can benefit from VeriPathways?</summary>
                         <p>
-                            No. Written findings can stand on their own. A consultation gives you an opportunity
-                            to discuss those findings and clarify next steps.
+                            Students and families preparing for college, navigating life on campus, considering
+                            research or experiential opportunities, or planning for graduate or PhD study can
+                            benefit from personalized guidance.
                         </p>
                     </details>
                     <details>
-                        <summary>Can I purchase more time?</summary>
+                        <summary>Can I schedule additional consultation time?</summary>
                         <p>
-                            Yes. Contact Rosa to discuss additional consultation time and scheduling options.
+                            Yes. Contact Rosa to discuss your needs and available scheduling options.
                         </p>
                     </details>
                     <details>
-                        <summary>Will Rosa tell me whether to stay or leave?</summary>
+                        <summary>Will Rosa tell me what to choose?</summary>
                         <p>
-                            The goal is not to make the decision for you. The audit identifies tradeoffs,
-                            tests assumptions, and gives you a clearer basis for making an informed decision.
+                            The goal is not to make the decision for you. Rosa provides research, data,
+                            perspective, and personalized guidance so you can understand the tradeoffs and
+                            make a confident decision that aligns with your goals, values, and aspirations.
                         </p>
                     </details>
                 </div>
@@ -851,7 +259,7 @@
                     <h2 id="contact-heading">Ready for a second opinion?</h2>
                     <p>Tell Rosa where you are in your academic journey and which decision you are trying to make.</p>
                 </div>
-                <a class="button" href="mailto:info.veripathways@gmail.com?subject=Academic%20Pathways%20Inquiry">Contact Rosa</a>
+                <a class="button" href="mailto:info@veripathways.com?subject=VeriPathways%20Inquiry">Contact Rosa</a>
             </div>
         </section>
     </main>
@@ -860,7 +268,7 @@
         <div class="footer-grid container">
             <p class="footer-copy">© <span id="year">2026</span> VeriPathways</p>
             <p class="disclaimer">
-                Academic Pathways provides independent educational consulting and general career-development guidance.
+                VeriPathways provides independent educational consulting and general career-development guidance.
                 It does not provide legal, financial, mental-health, or admissions guarantees.
             </p>
         </div>
