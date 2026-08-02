@@ -42,3 +42,7 @@ document.querySelectorAll(".nav").forEach((nav) => {
 
     mobileBreakpoint.addEventListener("change", closeMenu);
 });
+
+document.querySelectorAll("[data-current-year]").forEach((year) => {
+    year.textContent = new Date().getFullYear();
+});
