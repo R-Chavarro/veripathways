@@ -14,7 +14,12 @@
             <a class="site-banner" href="index.html" aria-label="VeriPathways home">
                 <img src="assets/images/veripathways-logo.png" alt="VeriPathways">
             </a>
-            <ul class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Toggle navigation menu">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-links" id="main-navigation">
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html" aria-current="page">About</a></li>
                 <li><a href="book-consult.html">Book a Consult</a></li>
@@ -83,6 +88,7 @@
         </div>
     </footer>
 
+    <script src="navigation.js" defer></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
