@@ -400,20 +400,21 @@ section {
     font-size: clamp(2.7rem, 5vw, 4.5rem);
 }
 
-.testimonials-page {
+.testimonials-section {
+    padding: 64px 0;
     background: var(--cream);
 }
 
-.testimonials-page .section-heading {
+.testimonials-section .section-heading {
     max-width: 800px;
-    margin: 0 auto 42px;
+    margin: 0 auto 28px;
     text-align: center;
 }
 
-.testimonials-page h1,
-.testimonials-page h2 {
+.testimonials-section h2 {
     max-width: 800px;
-    font-size: clamp(2.7rem, 5vw, 4.5rem);
+    margin-bottom: 0;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
 }
 
 .testimonial-card {
@@ -467,7 +468,7 @@ section {
 
 .about-portrait {
     overflow: hidden;
-    margin-top: calc(1.32rem + 44px + clamp(2.645rem, 4.6vw, 4.14rem));
+    margin-top: calc(1.32rem + 22px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 24px;
     background: var(--white);
@@ -612,6 +613,15 @@ details p {
 
 .contact {
     padding-top: 0;
+}
+
+.page-bottom-action {
+    padding: 0 0 64px;
+    text-align: center;
+}
+
+.faq-section {
+    padding-bottom: 48px;
 }
 
 .contact-panel {
