@@ -368,6 +368,10 @@ section {
     white-space: nowrap;
 }
 
+.contact-email-panel h2 {
+    margin-bottom: 0;
+}
+
 .page-hero {
     min-height: calc(100vh - 110px);
     background:
@@ -384,6 +388,15 @@ section {
 .page-hero h1 {
     max-width: 800px;
     font-size: clamp(2.7rem, 5vw, 4.5rem);
+}
+
+.services-hero {
+    min-height: auto;
+    padding-bottom: 52px;
+}
+
+.services-hero .section-heading {
+    margin-bottom: 0;
 }
 
 .testimonials-section {
@@ -442,6 +455,12 @@ section {
     font-size: 0.94rem;
 }
 
+.testimonial-signature {
+    display: block;
+    width: min(100%, 320px);
+    height: auto;
+}
+
 .page-cta {
     padding-top: 0;
     background: var(--vp-light);
@@ -455,13 +474,13 @@ section {
 .about-content {
     display: grid;
     grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
-    align-items: start;
+    align-items: center;
     gap: 64px;
 }
 
 .about-portrait {
     overflow: hidden;
-    margin-top: calc(1.32rem + 22px);
+    margin-top: 0;
     border: 1px solid oklch(from var(--vp-white) l c h / 0.18);
     border-radius: 24px;
     background: var(--vp-white);
