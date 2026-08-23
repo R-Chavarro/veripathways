@@ -217,6 +217,14 @@ a {
     font-size: 1.08rem;
 }
 
+.home-page .eyebrow {
+    color: var(--vp-secondary);
+    font-family: var(--vp-font-sans);
+    font-size: 1.08rem;
+    font-weight: 850;
+    line-height: 1.15;
+}
+
 h1, h2, h3 {
     font-family: var(--vp-font-sans);
     line-height: 1.15;
@@ -499,11 +507,15 @@ section {
     color: var(--vp-accent);
 }
 
-.about h1 {
-    max-width: none;
+.about-name {
+    width: min(100%, 520px);
     margin: 0 0 22px;
-    color: var(--vp-white);
-    font-size: clamp(2.3rem, 4vw, 3.6rem);
+}
+
+.about-name img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .about-copy {
@@ -550,7 +562,7 @@ section {
     object-position: center 38%;
 }
 
-.about-me-details h2 {
+.about-me-details h2:not(.eyebrow) {
     max-width: 680px;
     margin-bottom: 20px;
     color: var(--vp-primary);
