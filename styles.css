@@ -212,19 +212,6 @@ a {
     background: var(--vp-accent);
 }
 
-.hero-content > .eyebrow,
-.about-me-details > .eyebrow {
-    font-size: 1.08rem;
-}
-
-.home-page .eyebrow {
-    color: var(--vp-secondary);
-    font-family: var(--vp-font-sans);
-    font-size: 1.08rem;
-    font-weight: 850;
-    line-height: 1.15;
-}
-
 h1, h2, h3 {
     font-family: var(--vp-font-sans);
     line-height: 1.15;
@@ -270,7 +257,7 @@ section {
     letter-spacing: -0.03em;
 }
 
-.section-heading p {
+.section-heading p:not(.eyebrow) {
     color: var(--vp-muted);
     font-size: 1.08rem;
 }
@@ -688,6 +675,12 @@ footer {
     margin-top: 4px;
 }
 
+.home-page p:not(.eyebrow) {
+    font-family: var(--vp-font-sans);
+    font-size: 1.18rem;
+    font-style: normal;
+}
+
 .footer-links {
     display: flex;
     gap: 24px;
@@ -736,7 +729,7 @@ footer {
     font-weight: 500;
 }
 
-.legal-content p {
+.legal-content p:not(.eyebrow) {
     color: var(--vp-muted);
 }
 
