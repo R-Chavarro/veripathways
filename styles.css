@@ -394,6 +394,78 @@ section {
     margin-bottom: 0;
 }
 
+.services-packages {
+    padding: 72px 0;
+    background: var(--vp-white);
+}
+
+.services-packages .section-heading {
+    max-width: 800px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.package-card {
+    display: flex;
+    flex-direction: column;
+    padding: 34px;
+    border: 1px solid var(--vp-line);
+    border-top: 3px solid var(--vp-accent);
+    border-radius: var(--vp-radius);
+    background: var(--vp-paper);
+    box-shadow: var(--vp-shadow-soft);
+}
+
+.package-label {
+    margin-bottom: 12px;
+    color: var(--vp-secondary);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.package-card h3 {
+    margin-bottom: 14px;
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    font-weight: 550;
+    letter-spacing: -0.025em;
+}
+
+.package-fit {
+    min-height: 5.5rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--vp-line);
+    color: var(--vp-muted);
+}
+
+.package-card ul {
+    display: grid;
+    gap: 9px;
+    margin-top: auto;
+    padding-top: 20px;
+    padding-left: 1.2rem;
+}
+
+.package-card li::marker {
+    color: var(--vp-secondary);
+}
+
+.package-note {
+    max-width: 900px;
+    margin: 28px auto 0;
+    color: var(--vp-muted);
+    font-size: 0.92rem;
+    text-align: center;
+}
+
 .testimonials-section {
     padding: 64px 0;
     background: var(--vp-light);
@@ -793,6 +865,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
     .process-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -805,6 +881,18 @@ footer {
 @media (max-width: 700px) {
     .container {
         width: min(100% - 28px, 1120px);
+    }
+
+    .services-packages {
+        padding: 58px 0;
+    }
+
+    .package-card {
+        padding: 26px;
+    }
+
+    .package-fit {
+        min-height: 0;
     }
 
     .nav {

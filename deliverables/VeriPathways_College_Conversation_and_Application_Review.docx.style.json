@@ -1,0 +1,151 @@
+{
+  "input": "C:\\Users\\rosaf\\OneDrive\\documents\\Git\\veripathways\\deliverables\\VeriPathways_College_Conversation_and_Application_Review.docx",
+  "fonts_by_char_count": {
+    "Aptos": 854,
+    "Aptos Display": 53
+  },
+  "direct_run_formatting_runs": 32,
+  "direct_paragraph_formatting_paragraphs": 26,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 1,
+      "text": "VERIPATHWAYS",
+      "style": "Normal"
+    },
+    {
+      "para_index": 2,
+      "text": "PACKAGE 1",
+      "style": "Normal"
+    },
+    {
+      "para_index": 3,
+      "text": "College Conversation + Application Review",
+      "style": "Normal"
+    },
+    {
+      "para_index": 49,
+      "text": "BEST FIT",
+      "style": "Normal"
+    },
+    {
+      "para_index": 50,
+      "text": "EARLY COLLEGE EXPLORATION + LATER APPLICATION REVIEW",
+      "style": "Normal"
+    },
+    {
+      "para_index": 51,
+      "text": "Typical stage",
+      "style": "Normal"
+    },
+    {
+      "para_index": 53,
+      "text": "Primary focus",
+      "style": "Normal"
+    },
+    {
+      "para_index": 55,
+      "text": "Student's role",
+      "style": "Normal"
+    },
+    {
+      "para_index": 57,
+      "text": "SERVICE DETAIL",
+      "style": "Normal"
+    },
+    {
+      "para_index": 58,
+      "text": "CURRENT STATUS",
+      "style": "Normal"
+    },
+    {
+      "para_index": 59,
+      "text": "Price",
+      "style": "Normal"
+    },
+    {
+      "para_index": 61,
+      "text": "Duration / active period",
+      "style": "Normal"
+    },
+    {
+      "para_index": 63,
+      "text": "Applications and supplements included",
+      "style": "Normal"
+    },
+    {
+      "para_index": 65,
+      "text": "Review cycles and feedback format",
+      "style": "Normal"
+    },
+    {
+      "para_index": 67,
+      "text": "Turnaround and communication access",
+      "style": "Normal"
+    },
+    {
+      "para_index": 70,
+      "text": "VERIPATHWAYS  |  1",
+      "style": "Footer"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "VERIPATHWAYS",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "text": "PACKAGE 1",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "College Conversation + Application Review",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "Begin with the bigger college questions. Apply with a clearer sense of purpose.",
+        "style": "Normal"
+      },
+      {
+        "para_index": 47,
+        "text": "Next step: Schedule an introductory conversation to confirm fit, scope, and timing.",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "VERIPATHWAYS",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "PACKAGE 1",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "College Conversation + Application Review",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "run_text": "Begin with the bigger college questions. Apply with a clearer sense of purpose.",
+        "style": "Normal"
+      },
+      {
+        "para_index": 43,
+        "run_text": "Student authorship. ",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}
