@@ -1,5 +1,10 @@
 const mobileBreakpoint = window.matchMedia("(max-width: 700px)");
 const precisePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+const consultationUrl = "https://calendar.app.google/QWCmZcuxgJFNvqA4A";
+
+document.querySelectorAll("[data-consultation-link]").forEach((link) => {
+    link.href = consultationUrl;
+});
 
 document.querySelectorAll(".site-header").forEach((header) => {
     const menuToggle = header.querySelector(".nav-toggle");

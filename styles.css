@@ -434,6 +434,10 @@ section {
     box-shadow: var(--vp-shadow-soft);
 }
 
+.package-card-wide {
+    grid-column: 1 / -1;
+}
+
 .package-label {
     margin-bottom: 12px;
     color: var(--vp-secondary);
@@ -754,7 +758,7 @@ footer {
 .footer-copy,
 .disclaimer {
     color: var(--vp-muted);
-    font-size: 0.78rem;
+    font-size: 0.84rem;
 }
 
 .disclaimer {
@@ -762,7 +766,7 @@ footer {
     margin-top: 4px;
 }
 
-.home-page p:not(.eyebrow) {
+.home-page main p:not(.eyebrow) {
     font-family: var(--vp-font-sans);
     font-size: 1.18rem;
     font-style: normal;
