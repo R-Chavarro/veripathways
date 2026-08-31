@@ -393,11 +393,9 @@ section {
 .services-banner {
     display: block;
     width: 100%;
-    height: clamp(240px, 36vw, 430px);
+    height: auto;
     margin-top: 32px;
     border-radius: 24px;
-    object-fit: cover;
-    object-position: center 52%;
     box-shadow: var(--vp-shadow-medium);
 }
 
