@@ -363,10 +363,6 @@ section {
     white-space: nowrap;
 }
 
-.contact-email-panel h2 {
-    margin-bottom: 0;
-}
-
 .page-hero {
     min-height: calc(100vh - 110px);
     background:
@@ -544,8 +540,19 @@ section {
 }
 
 .page-cta {
-    padding-top: 0;
+    display: grid;
+    justify-items: center;
+    gap: 24px;
+    padding: 70px 20px;
     background: var(--vp-light);
+    text-align: center;
+}
+
+.page-cta h2 {
+    margin-bottom: 0;
+    color: var(--vp-primary);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
 }
 
 .about {
@@ -774,6 +781,7 @@ footer {
 
 .footer-links {
     display: flex;
+    align-items: center;
     gap: 24px;
     list-style: none;
 }
@@ -807,10 +815,20 @@ footer {
     max-width: 780px;
 }
 
-.legal-content h1 {
+.content-page-heading {
+    max-width: 780px;
+    margin-bottom: 45px;
+}
+
+.content-page-heading h1 {
     max-width: 780px;
     margin: 0 0 10px;
     font-size: clamp(2.7rem, 5vw, 4.5rem);
+}
+
+.content-page-heading > p:not(.policy-date) {
+    color: var(--vp-muted);
+    font-size: 1.08rem;
 }
 
 .legal-content h2 {
@@ -830,7 +848,7 @@ footer {
 }
 
 .policy-date {
-    margin-bottom: 45px;
+    margin-bottom: 0;
     font-size: 0.9rem;
 }
 
@@ -1023,6 +1041,11 @@ footer {
 
     .footer-links {
         flex-wrap: wrap;
+        row-gap: 18px;
+    }
+
+    .footer-inquiries {
+        flex-basis: 100%;
     }
 }
 

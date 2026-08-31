@@ -1,4 +1,7 @@
-google_account/
-references/
-server/
+.aws/
+.deliverables/
+.docx-work/
+.google_account/
+.references/
+.server/
 desktop.ini
