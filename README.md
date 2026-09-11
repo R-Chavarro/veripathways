@@ -1,44 +1,27 @@
 # VeriPathways
 
-## Overview
+VeriPathways is an independent higher-education consulting practice.
 
-VeriPathways is a research-driven higher education consulting platform
-that helps students make informed academic and career decisions through
-evidence-based advising rather than institutional reputation alone.
+## Current website
 
-The long-term vision is to build a trusted platform that combines expert
-consulting, data analysis, and technology to guide students at every
-stage of higher education---from undergraduate admissions through
-postdoctoral career planning.
+The static site currently includes:
 
-## Mission
+- **Home** (`index.html`)
+- **Services** (`services.html`)
+- **About** (`about.html`)
+- **Privacy Policy** (`privacy-policy.html`) and **Terms of Use** (`terms-of-use.html`).
+- **Error page** (`error.html`).
 
-Empower students to confidently choose educational pathways that align
-with their interests, strengths, and long-term career goals using
-objective research, personalized guidance, and measurable outcomes.
+All primary calls to action link to the public Google Calendar consultation scheduler.
 
-## Services
+## Local development
 
--   Undergraduate advising
--   Graduate Program program strategy
--   Academic and career pathway consulting
+This is a plain static website. Open the HTML files in a browser or serve the repository with any local static-file server. The shared presentation and behavior live in:
 
-## Long-Term Vision
+- `styles.css` — responsive site styling.
+- `site.js` — mobile navigation, current footer year, and centralized consultation-link behavior.
+- `assets/` — logo, favicon, founder portrait, testimonials, and supporting imagery.
 
-VeriPathways will evolve beyond a consulting practice into a
-comprehensive platform that includes:
+## Production deployment
 
--   A public website and educational resources
--   A proprietary database of universities, faculty, and research
-    programs
--   Evidence-based rankings and decision tools
--   AI-assisted advising
--   Client management and analytics tools
--   Research publications and guides
-
-## Repository Purpose
-
-This repository contains the source code, documentation, infrastructure,
-automation, and business assets that support the VeriPathways platform
-and its ongoing development.
--
+The website is deployed as a static site.
